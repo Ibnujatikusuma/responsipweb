@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kalkulator</title>
+	<script type="text/javascript">
+		function clearScreen() {
+		 document.getElementById("result").value = "";
+		}
+
+		function display(value) {
+		 document.getElementById("result").value += value;
+		}
+
+		function calculate() {
+		 var p = document.getElementById("result").value;
+		 var q = eval(p);
+		 document.getElementById("result").value = q;
+}
+ </script>
+</head>
+
+<body>
+<center><h2>KALKULATOR</h2></center>
+<table border="1" align="center">
+	<tr>
+	<td colspan = "3"> <input class = "display-box" type = "text" id = "result" disabled /> </td>
+
+	<tr>
+	<td>
+		<table>
+			<tr>
+				<td width="50%" align="center">
+				<input type="button" value="1" onclick = "display('1')" /;>
+				<input type="button" value="2" onclick = "display('2')" /;>
+				<input type="button" value="3" onclick = "display('3')" /;>
+				<input type="button" value="*" onclick = "display('*')" /;></td></tr>
+			<tr>
+			<td width="50%" align="center">
+				<input type="button" value="4" onclick = "display('4')" /;>
+				<input type="button" value="5" onclick = "display('5')" /;>
+				<input type="button" value="6" onclick = "display('6')" /;>
+				<input type="button" value="/" onclick = "display('/')" /;></td></tr>
+			<tr>
+			<td width="50%" align="center">
+				<input type="button" value="7" onclick = "display('7')" /;>
+				<input type="button" value="8" onclick = "display('8')" /;>
+				<input type="button" value="9" onclick = "display('9')" /;>
+				<input type="button" value="+" onclick = "display('+')" /;></td></tr>
+			<tr>
+			<td width="50%" align="center">
+				<input type="button" value="." onclick = "display('.')" /;>
+				<input type="button" value="0" onclick = "display('0')" /;>
+				<input class = "button" type = "button" value = "C" onclick = "clearScreen()" />
+				<input type="button" value="-" onclick = "display('-')" /;></td></tr>
+		</table>
+		<tr>
+			<td colspan="4" align="right">
+			<input type="button" value="Enter" onclick = "calculate()";>
+			
+			</td></tr>
+	</td>
+</tr>
+		
+	
+</table>
+
+</body>
+</html>
